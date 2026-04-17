@@ -34,7 +34,7 @@
 
 </div>
 
-**🔗 Live Demo:** [your-live-url.up.railway.app](https://scholarsphere-pied.vercel.app)
+**🔗 Live Demo:** [educase-india-assignment-black.vercel.app](https://educase-india-assignment-black.vercel.app/)
 
 ---
 
