@@ -7,7 +7,7 @@ export default function ProfilePage() {
       position: "relative",
       width: "375px",
       height: "812px",
-      background: "#F7F8F9",
+      background: "#F7F8F9 0% 0% no-repeat padding-box",
       fontFamily: "Rubik",
       margin: "0 auto",
       overflow: "hidden"

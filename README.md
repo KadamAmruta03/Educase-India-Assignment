@@ -1,69 +1,117 @@
-# PopX Mobile App - Pixel Perfect UI Implementation
+# PopX Mobile App | Pixel-Perfect UI Implementation
 
-A high-fidelity, 4-page mobile-first React application built with precision following exact design tokens extracted from Adobe XD. This project focuses on achieving a 1:1 visual match with specialized design requirements.
+<div align="center">
 
-## 🚀 Key Features
+![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react)
+![Vite](https://img.shields.io/badge/Vite-powered-646CFF?style=flat-square&logo=vite)
+![React Router](https://img.shields.io/badge/React_Router-v6-CA4245?style=flat-square&logo=reactrouter)
+![Adobe XD](https://img.shields.io/badge/Design-Adobe_XD-FF61F6?style=flat-square&logo=adobexd)
+![CSS3](https://img.shields.io/badge/CSS3-Pixel_Perfect-1572B6?style=flat-square&logo=css3)
 
-- **4-Page Seamless Flow**: Includes Landing, Login, Signup, and Profile pages.
-- **Pixel-Perfect Alignment**: Every element's position (top, left, width, height) is mapped directly from Adobe XD specs.
-- **Mobile-First Container**: The app is housed in a fixed 375x812px shell, centered on the webpage for a premium mobile-app simulation on desktop.
-- **Dynamic Navigation**: Efficient routing implemented with `react-router-dom`.
-- **Custom Design Tokens**: Precise font weights (Rubik), specific line-heights (e.g., 28px/17px), and custom brand colors (#6C25FF).
+</div>
 
-## 🛠️ Technology Stack
+> A professional mobile-first frontend showcase built to demonstrate absolute UI precision — transforming high-fidelity Adobe XD design tokens into a seamless, 4-page React application with rigorous attention to layout coordinates and typography.
 
-- **Framework**: [React.js](https://reactjs.org/)
-- **Build Tool**: [Vite](https://vitejs.dev/)
-- **Navigation**: [React Router DOM v6](https://reactrouter.com/)
-- **Styling**: Custom CSS & Inline Styling (for absolute coordinate precision)
-- **Typography**: [Google Fonts - Rubik](https://fonts.google.com/specimen/Rubik)
+---
 
-## 🎨 Design Methodology
+## Overview
 
-The styling logic for this project was derived directly from **Adobe XD** design files. By using the `{}` CSS extraction feature in Adobe XD, we ensured:
-- **Absolute Positioning**: Elements are mapped within a relative 375x812px parent.
-- **Floating Labels**: Custom implementations for input fields to mimic high-end mobile UI behavior.
-- **Visual Accuracy**: Correct implementation of dashed borders, opacity levels, and shadow depths.
+PopX is a **pure frontend challenge** focused on achieving a 1:1 visual match with specialized design requirements. The project simulates a modern mobile application environment by housing the interface in a fixed **375x812px container**, centered on the webpage for a premium desktop viewing experience.
 
-## 📦 Getting Started
+Every coordinate, font-weight, and color hex was extracted directly from the **Adobe XD `{}` CSS panel** to ensure that the digital implementation is indistinguishable from the original design.
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16.0.0 or higher)
-- npm or yarn
+---
 
-### Installation
+## Tech Stack
 
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd popx-app
-   ```
+| Layer | Technology |
+|---|---|
+| Core Framework | React 18+ (Vite-powered) |
+| Routing | React Router DOM v6 — Seamless Navigation |
+| Styling | CSS3 & Precision Inline Styling (for coordinate mapping) |
+| Typography | Google Fonts - Rubik (exact weights 400/500/600) |
+| Design Source | Adobe XD Design Tokens |
+| Deployment | Production Ready |
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+---
 
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-   *The app will be available at `http://localhost:5173`.*
+## Technical Highlights
 
-## 📂 Project Structure
+### 1. Adobe XD Precision Mapping
+Every element in the app (from the "Welcome" text to the radio buttons) is positioned using absolute coordinates derived from design tokens. For example, the **Create Account** text is mathematically placed to hit exactly `top: 683px` and `left: 127px` relative to the mobile container.
 
-```text
-src/
-├── assets/          # Project images and icons
-├── pages/           # Individual page components
-│   ├── LandingPage.jsx
-│   ├── LoginPage.jsx
-│   ├── SignupPage.jsx
-│   └── ProfilePage.jsx
-├── App.jsx          # Route definitions
-└── index.css        # Global resets and fonts
+### 2. Custom Floating Label Architecture
+To achieve the "cut-border" look of the input fields, we implemented a custom layered approach:
+- **Label Background**: A `span` with `#F7F8F9` background placed strictly to "cut" the field border.
+- **Floating Labels**: Precisely positioned at `left: 34px` to ensure the text alignment transition feels premium.
+
+### 3. Mobile-First Shell Centering
+The app uses a `relative` positioning strategy within a centered `margin: 0 auto` wrapper. This ensures that while the app is built for a 375px wide viewport, it remains perfectly anchored and accessible on full-screen desktop browsers.
+
+### 4. Optimized Navigation
+Using `react-router-dom`, the application maintains high performance during transitions. Navigation from the **Landing Page** to **Signup** or **Login**, and eventually to the **Profile**, happens instantly without page reloads.
+
+---
+
+## Project Structure
+
+```plaintext
+popx-app/
+├── public/              # Static assets and favicons
+├── src/
+│   ├── assets/          # High-fidelity images & SVG icons (Camera icon, Profile pic)
+│   ├── pages/
+│   │   ├── LandingPage.jsx   # Initial entry with dual routing options
+│   │   ├── LoginPage.jsx     # Credential entry with precision placeholders
+│   │   ├── SignupPage.jsx    # Complex form with radio button logic
+│   │   └── ProfilePage.jsx   # Dash-lined info summary & bio view
+│   ├── components/       # Reusable pixel-perfect atomic units
+│   ├── styles/           # Global resets and Rubik font imports
+│   ├── App.jsx           # Root router and layout management
+│   └── main.jsx          # Vite entry point
+├── index.html
+├── vite.config.js
+└── README.md
 ```
 
 ---
 
-**Developed for the Educase assignment with a focus on UI/UX precision.**
+## Local Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/KadamAmruta03/Educase-India-Assignment.git
+
+# Enter the directory
+cd popx-app
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+
+Open: `http://localhost:5173`
+
+---
+
+## What I Learned
+
+This project was a deep dive into **UI/UX precision engineering**:
+- **Atomic Layout Control**: Mastered the art of translating absolute design coordinates into responsive React components.
+- **Font Rendering**: Dealing with specialized `line-height` requirements (like 28px/17px) where character bleeding must be managed for baseline accuracy.
+- **State-Driven Styles**: Implementing custom radio button logic where the border and inner-dot colors change dynamically based on selection (`#642AF5` focus).
+- **CSS Resets**: Building a clean environment to ensure standard browser margins don't interfere with Adobe XD positioning.
+
+---
+
+## Contributing
+
+Suggestions for UI optimizations are always welcome! Feel free to open an issue or submit a pull request.
+
+---
+
+## License
+
+This project is open-source and intended for the Educase-India-Assignment portfolio.
