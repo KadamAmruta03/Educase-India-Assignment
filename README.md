@@ -34,6 +34,8 @@
 
 </div>
 
+**🔗 Live Demo:** [your-live-url.up.railway.app](https://scholarsphere-pied.vercel.app)
+
 ---
 
 ## Overview
